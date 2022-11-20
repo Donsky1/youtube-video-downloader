@@ -22,13 +22,14 @@
 <i id='playlist'>Если в качестве значения в поле запроса передать ссылку на общедоступный плейлист: </i>
 <p align='center'><img src='https://github.com/Donsky1/youtube-video-downloader/blob/master/images/playlist.png'></p>
 
-<h2 id='installation'>Установка</h2><i>(действия будут выполнятся на windows)</i>
+<h2 id='installation'>Установка</h2>
+<br><i>(действия будут выполнятся на windows)</i>
 <p>1. Создаем директорию, клонируем проект в эту папку ... <p>
 
 ```
 git clone ..
 ```
-<p>2. Установим все необходимые библиотеки, используя pip ... <p>
+<p>2. Устанавливаем все необходимые библиотеки, используя pip ... <p>
   
 ```pip
 pip install -r requirements.txt
