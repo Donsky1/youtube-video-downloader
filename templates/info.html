@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Grid Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/grid/">
+
+    
+
+    
+
+<link href="static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .loading {
+          font-weight: bold;
+          display:inline-block;
+          font-family: monospace;
+          font-size: 18px;
+          clip-path: inset(0 3ch 0 0);
+          animation: l 1s steps(4) infinite;
+        }
+
+        @keyframes l {
+          to {
+            clip-path: inset(0 -1ch 0 0)
+          }
+        }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="static/grid.css" rel="stylesheet">
+  </head>
+  <body class="py-4">
+    
+<main>
+  <div class="container">
+   <h6><a href="/" >Назад</a></h6>
+    {% if context.status == 404 %}
+       {{ context.channel_title }}
+      {% else %}
+       <h2 class="mt-4">{{ context.title }}</h2>
+       <p>{{ context.description }}</p>
+        <div class="row mb-3 text-center">
+          <div class="col-md-8 themed-grid-col">
+            <div class="pb-3">
+              <b>Название канала: </b><a href='{{ context.channel_url }}' >{{ context.channel_title }}</a>
+            </div>
+            <div class="row">
+              <div class="col-md-6 themed-grid-col">Кол-во просмотров:</div>
+              <div class="col-md-6 themed-grid-col">{{ context.views }}</div>
+              <div class="col-md-6 themed-grid-col">Продолжительность видео:</div>
+              <div class="col-md-6 themed-grid-col">{{ context.length }} мин </div>
+              <div class="col-md-6 themed-grid-col">Ссылка на скачивание: </div>
+              <div class="col-md-6 themed-grid-col">
+                  <input type="text" id="link" value="{{ context.url }}" hidden>
+                  <input type="submit" id="save" value="скачать">
+              </div>
+            </div>
+            <div id="info" style="margin-top: 10px;"></div>
+              <i id="folder"></i>
+          <!--image-->
+          </div>
+            <div class="col-md-4 themed-grid-col"><img src="{{ context.image }}" width=300px></div>
+          </div>
+      {% endif %}
+  </div>
+</main>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="static/js/save.js"></script>
+</body>
+</html>
