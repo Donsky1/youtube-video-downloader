@@ -7,18 +7,6 @@ app = Flask(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent
 
-# playlist = Playlist("https://www.youtube.com/playlist?list=PLI8lJc2m3WQlDJfuRmPhOMJw-OUni8Tg2")
-#
-# for video_link in playlist.video_urls:
-#
-#     try:
-#         print(YouTube(video_link).title)
-#         print(YouTube(video_link).channel_url)
-#         print(video_link)
-#
-#     except:
-#         print(video_link + " unavailable")
-
 
 def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
