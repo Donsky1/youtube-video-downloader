@@ -23,7 +23,8 @@
 <p align='center'><img src='https://github.com/Donsky1/youtube-video-downloader/blob/master/images/playlist.png'></p>
 
 <h2 id='installation'>Установка</h2>
-<br><i>(действия будут выполнятся на windows)</i>
+<i>(действия будут выполнятся на windows)</i><br><br>
+
 <p>1. Создаем директорию, клонируем проект в эту папку ... <p>
 
 ```
